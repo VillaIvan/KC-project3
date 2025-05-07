@@ -4,22 +4,23 @@ import HeroImg from "@/components/assets/heroimg.webp";
 ---
 
 <section class="h-[100vh] w-full p-10 mb-20 md:mb-0">
-  <div class="grid sm:grid-cols-2 gap-2 h-full items-center my-20">
+  <div class="grid md:grid-cols-2 gap-2 md:gap-10 h-full items-center mb-25">
     <div class="">
       <img
-        class="w-full md:w-[60%] object-cover rounded-full mx-auto"
+        class="w-[30rem] sm:w-[32rem] md:w-[25rem] lg:w-[35rem] object-cover rounded-full mx-auto"
         src={HeroImg.src}
       />
     </div>
     <div class="flex flex-col gap-6 md:gap-14 items-start justify-center">
-      <div>
+      <div class="md:text-start text-center w-full">
         <h1
-          class="text-7xl text-center md:text-start md:text-8xl font-bold text-white"
+          class="flex flex-col text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white"
         >
-          Tu auto,<br /> Mas que Seguro
+          <span class="block md:inline">Tu auto,</span>
+          <span class="block md:inline">Más que Seguro</span>
         </h1>
       </div>
-      <div>
+      <div class="md:text-start text-center w-full">
         <p class="text-xl mx-auto text-gray-400">
           Viaja con la tranquilidad de tener la mejor cobertura.
         </p>
