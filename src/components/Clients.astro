@@ -1,13 +1,23 @@
 ---
 import BrandsLoop from "../components/BrandsLoop.jsx";
+import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 ---
 
 <section class="h-[100vh] bg-white rounded-4xl relative">
-  <hr
-    class="w-[90%] md:w-[80%] border-t border-gray-400 absolute top-20 left-1/2 transform -translate-x-1/2"
-  /><div class="h-24 md:h-48"></div>
+  <div class="relative h-24 flex items-center justify-center overflow-hidden">
+    <svg
+      class="w-[90%] md:w-[80%] h-2"
+      viewBox="0 0 1440 2"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+      <path id="glow-scan" d="M0 1 L0 1" stroke="#202c2f" stroke-width="2"
+      ></path>
+    </svg>
+    <GlowLineAnimation client:load />
+  </div>
   <div
-    class="flex justify-between md:flex-row flex-col mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-0 mb-15"
+    class="flex justify-between md:flex-row flex-col mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-20 mb-15"
   >
     <h2 class="text-4xl sm:text-5xl">Clientes Que Confian</h2>
     <p class="mx-auto md:mx-0 w-full md:w-1/3 text-lg">
@@ -16,4 +26,16 @@ import BrandsLoop from "../components/BrandsLoop.jsx";
     </p>
   </div>
   <BrandsLoop client:load />
+  <div class="relative h-24 flex items-center justify-center overflow-hidden">
+    <svg
+      class="w-[90%] md:w-[80%] h-2"
+      viewBox="0 0 1440 2"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+      <path id="glow-scan" d="M0 1 L0 1" stroke="#202c2f" stroke-width="2"
+      ></path>
+    </svg>
+    <GlowLineAnimation client:load />
+  </div>
 </section>
