@@ -1,6 +1,6 @@
 ---
-import BrandsLoop from "../components/BrandsLoop.jsx";
 import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
+import Counter from "./Counter.astro";
 ---
 
 <div class="relative h-24 flex items-center justify-center overflow-hidden">
@@ -17,10 +17,11 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 <div
   class="flex justify-between md:flex-row flex-col mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-20 mb-15"
 >
-  <h2 class="text-4xl sm:text-5xl">Clientes Que Confian</h2>
+  <h2 class="text-4xl sm:text-5xl">Nuestros Numeros</h2>
   <p class="mx-auto md:mx-0 w-full md:w-1/3 text-lg">
-    Nuestros expertos asesoran a empresas en todas las etapas de crecimiento
-    sobre estrategias que se alinean con su filosofía de beneficios.
+    Los datos hablan por sí solos. Desde nuestra amplia cartera de clientes
+    consolidados y en crecimiento hasta nuestra excelente tasa de retención de
+    clientes, construimos relaciones duraderas.
   </p>
 </div>
-<BrandsLoop client:load />
+<Counter />

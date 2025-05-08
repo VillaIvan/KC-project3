@@ -1,0 +1,93 @@
+---
+import { History, Network, Users } from "@lucide/astro";
+import CounterUp from "./CounterUp.astro";
+---
+
+<section
+  class="w-[90%] md:w-[80%] px-4 sm:px-6 md:px-8 flex flex-col gap-6 sm:flex-row justify-around items-center my-20 py-10 mx-auto"
+>
+  <div
+    class="w-[90%] md:w-[80%] text-start bg-lightwhite2 py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6"
+  >
+    <div
+      class="w-12 sm:w-14 md:w-16 aspect-square flex items-center justify-center rounded-full border-2 border-primary"
+    >
+      <Users class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
+    </div>
+    <CounterUp dataVal="3500" text="Clientes nos eligen dia a dia" />
+  </div>
+  <div
+    class="w-[90%] md:w-[80%] text-start bg-lightwhite2 py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6"
+  >
+    <div
+      class="w-12 sm:w-14 md:w-16 aspect-square flex items-center justify-center rounded-full border-2 border-primary"
+    >
+      <History class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
+    </div>
+    <CounterUp dataVal="10" text="Años de experiencia en el rubro" />
+  </div>
+  <div
+    class="w-[90%] md:w-[80%] text-start bg-lightwhite2 py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6"
+  >
+    <div
+      class="w-12 sm:w-14 md:w-16 aspect-square flex items-center justify-center rounded-full border-2 border-primary"
+    >
+      <Network class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
+    </div>
+    <CounterUp dataVal="20" text="Colaboradores en nuestro buffet" />
+  </div>
+</section>
+
+<script>
+  // Esperamos a que el contenido se cargue completamente antes de ejecutar el script
+  document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionamos todos los elementos con la clase "num"
+    let valueDisplays = document.querySelectorAll(".num");
+
+    // Iteramos sobre cada elemento
+    valueDisplays.forEach((valueDisplay) => {
+      // Obtenemos el valor final del atributo "data-val"
+      let dataVal = valueDisplay.getAttribute("data-val");
+      let endValue = dataVal ? parseInt(dataVal) : 0;
+
+      // Verificamos si el valor es un número válido
+      if (isNaN(endValue)) {
+        console.error(
+          "El atributo data-val no es un número válido:",
+          valueDisplay
+        );
+        return;
+      }
+
+      // Creamos un contador
+      let current = 0;
+      let duration = 5000; // Duración de la animación en milisegundos
+      let step = Math.ceil(duration / endValue); // Paso para cada iteración del contador
+
+      // Función para animar el contador
+      function animateValue() {
+        current += 1;
+        valueDisplay.textContent = "+" + current.toString(); // Mostramos el valor actual
+        if (current < endValue) {
+          // Si no hemos alcanzado el valor final, continuamos la animación
+          setTimeout(animateValue, step);
+        } else {
+          // Si hemos alcanzado el valor final, mostramos el valor formateado
+          valueDisplay.textContent = "+" + formatNumber(endValue);
+        }
+      }
+
+      // Iniciamos la animación
+      animateValue();
+    });
+  });
+
+  // Función para formatear el número con "K" si es mayor o igual a 1000
+  function formatNumber(value: number) {
+    if (value >= 1000) {
+      return (value / 1000).toFixed(1) + "K";
+    } else {
+      return value.toString();
+    }
+  }
+</script>

@@ -1,15 +1,27 @@
 ---
+import AboutUs from "@/components/AboutUs.astro";
 import Clients from "@/components/Clients.astro";
 import Hero from "@/components/Hero.astro";
 import Layout from "@/layouts/Layout.astro";
+import HeroCarousel from "@/components/HeroCarousel";
+import Numbers from "@/components/Numbers.astro";
 
 // Page metadata
-const pageTitle = "KC-Project3";
+const pageTitle = "Organización Cucharello";
 const pageDescription =
-  "With elite insurance expertise empowered by breakthrough technology, Newfront is the modern insurance brokerage for the 21st century.";
+  "Con experiencia en seguros de élite potenciada por tecnología innovadora, Organización Cucharello es la correduría de seguros moderna del siglo XXI.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <Hero />
-  <Clients />
+  <main class="relative z-0">
+    <Hero />
+    <section class="h-auto bg-lightwhite rounded-4xl relative z-10">
+      <Clients />
+      <AboutUs />
+    </section>
+    <HeroCarousel client:load />
+    <section class="h-auto bg-lightwhite rounded-4xl relative z-10 -mt-5">
+      <Numbers />
+    </section>
+  </main>
 </Layout>

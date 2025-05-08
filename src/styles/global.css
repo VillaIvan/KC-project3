@@ -1,6 +1,57 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #111a1c;
-  --color-lightblack: #202c2f;
+  --color-background: #0a549c;
+  --color-primary: #111a1c;
+  --color-lightwhite: #d9d9d9;
+  --color-lightwhite2: #eaeaea;
+  --font-primary: "AeonikTRIAL", "sans-serif";
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-RegularItalic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-LightItalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("/src/components/assets/fonts/AeonikTRIAL-BoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
 }

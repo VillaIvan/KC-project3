@@ -1,0 +1,154 @@
+---
+import Placeholder from "@/components/assets/placeholder.svg";
+import { Asterisk } from "@lucide/astro";
+import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
+---
+
+<div
+  class="relative h-24 flex items-center justify-center overflow-hidden mb-20"
+>
+  <svg
+    class="w-[90%] md:w-[80%] h-2"
+    viewBox="0 0 1440 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+  </svg>
+  <GlowLineAnimation client:load />
+</div>
+
+<section
+  class="h-auto w-[90%] md:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto"
+>
+  <div class="flex md:items-center md:justify-center">
+    <div class="flex flex-col justify-start items-start gap-4 w-full sm:w-3/4">
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-md">Innovación impactante</h3>
+        <h2 class="text-4xl sm:text-5xl flex flex-col">
+          <span>Trazando un</span><span>nuevo rumbo</span>
+        </h2>
+        <p class="w-full text-xl">
+          Estamos aportando tecnología avanzada a una industria anticuada,
+          fomentando la transparencia, la conveniencia y resultados optimizados
+          para el cliente.
+        </p>
+      </div>
+
+      <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          Los clientes de seguros comerciales pueden tener acceso las 24 horas,
+          los 7 días de la semana a todo su programa de seguros a través de
+          cualquiera de nuestros agentes.
+        </p>
+      </div>
+
+      <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          Los clientes de seguros pueden acceder a planes de beneficios,
+          información de cumplimiento y documentos seguros en nuestra plataforma
+          centralizada.
+        </p>
+      </div>
+
+      <div
+        class="w-full border-t border-t-gray-200 border-b border-b-gray-200 flex gap-4 p-6 items-start"
+      >
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          El análisis predictivo y la evaluación comparativa patentada permiten
+          mejores negociaciones con los operadores y una toma de decisiones
+          informada.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="w-3/4 xl:w-3xl lg:w-2xl md:w-xl mx-auto">
+      <img class="rounded-4xl" src={Placeholder.src} />
+    </div>
+  </div>
+</section>
+
+<div
+  class="relative h-24 flex items-center justify-center overflow-hidden mb-20"
+>
+  <svg
+    class="w-[90%] md:w-[80%] h-2"
+    viewBox="0 0 1440 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+  </svg>
+  <GlowLineAnimation client:load />
+</div>
+
+<section
+  class="h-auto w-[90%] md:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto"
+>
+  <div class="h-auto m-auto">
+    <div class="w-3/4 mx-auto">
+      <img class="rounded-4xl" src={Placeholder.src} />
+    </div>
+  </div>
+
+  <div class="flex md:items-center md:justify-center">
+    <div class="flex flex-col justify-start items-start gap-4 w-full sm:w-3/4">
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-md">Innovación impactante</h3>
+        <h2 class="text-4xl sm:text-5xl flex flex-col">
+          <span>Trazando un</span><span>nuevo rumbo</span>
+        </h2>
+        <p class="w-full text-xl">
+          Estamos aportando tecnología avanzada a una industria anticuada,
+          fomentando la transparencia, la conveniencia y resultados optimizados
+          para el cliente.
+        </p>
+      </div>
+
+      <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          Los clientes de seguros comerciales pueden tener acceso las 24 horas,
+          los 7 días de la semana a todo su programa de seguros a través de
+          cualquiera de nuestros agentes.
+        </p>
+      </div>
+
+      <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          Los clientes de seguros pueden acceder a planes de beneficios,
+          información de cumplimiento y documentos seguros en nuestra plataforma
+          centralizada.
+        </p>
+      </div>
+
+      <div
+        class="w-full border-t border-t-gray-200 border-b border-b-gray-200 flex gap-4 p-6 items-start"
+      >
+        <Asterisk class="w-5 h-5 shrink-0 mt-1" color="currentColor" />
+        <p class="text-lg font-normal">
+          El análisis predictivo y la evaluación comparativa patentada permiten
+          mejores negociaciones con los operadores y una toma de decisiones
+          informada.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="relative h-24 flex items-center justify-center overflow-hidden">
+  <svg
+    class="w-[90%] md:w-[80%] h-2"
+    viewBox="0 0 1440 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+  </svg>
+  <GlowLineAnimation client:load />
+</div>
