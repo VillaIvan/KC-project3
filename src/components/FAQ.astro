@@ -1,0 +1,61 @@
+---
+import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
+import FaqItem from "@/components/FaqItem.jsx";
+---
+
+<div class="relative h-24 flex items-center justify-center overflow-hidden">
+  <svg
+    class="w-[90%] md:w-[80%] h-2"
+    viewBox="0 0 1440 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+  </svg>
+  <GlowLineAnimation client:load />
+</div>
+
+<div
+  class="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-20 mb-15 pb-20"
+>
+  <div class="flex flex-col md:gap-2 gap-6">
+    <h2 class="text-4xl sm:text-5xl flex flex-row md:flex-col gap-2">
+      <span>Preguntas</span><span>Frecuentes</span>
+    </h2>
+    <p class="mx-auto md:mx-0 w-full md:w-1/2 text-lg">
+      Encuentre respuestas a preguntas comunes sobre nuestros servicios de
+      seguros.
+    </p>
+  </div>
+  <div>
+    <section class="w-full">
+      <div class="mx-auto w-[90%] md:w-[80%] space-y-4 flex flex-col gap-4">
+        <FaqItem
+          client:load
+          question="How do I file a claim?"
+          answer="You can file a claim 24/7 through nuestro portal online..."
+        />
+        <FaqItem
+          client:load
+          question="What factors affect my insurance premium?"
+          answer="Insurance premiums are determined by various factors including your coverage limits, deductible amount, location, claim history, and specific risk factors related to what you're insuring (e.g., home age, driving record, health status)."
+        />
+        <FaqItem
+          client:load
+          question="Can I bundle multiple insurance policies?"
+          answer="Yes, we offer multi-policy discounts when you bundle different insurance types with us. Common bundles include home and auto insurance, which can save you up to 20% on your premiums."
+        />
+        <FaqItem
+          client:load
+          question="How often should I review my insurance coverage?"
+          answer="We recommend reviewing your insurance coverage annually or whenever you experience major life changes such as marriage, home purchase, having children, or significant income changes to ensure your coverage still meets your needs."
+        />
+        <FaqItem
+          client:load
+          question="What payment options do you offer?"
+          answer="We offer flexible payment options including monthly, quarterly, semi-annual, and annual payment plans. You can pay via credit card, bank transfer, check, or through our automatic payment system."
+        />
+      </div>
+    </section>
+  </div>
+</div>

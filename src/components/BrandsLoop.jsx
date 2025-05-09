@@ -41,35 +41,35 @@ export default function BrandsLoop() {
   return (
     <div ref={containerRef} className="overflow-hidden w-full py-10">
       <div ref={trackRef} className="flex gap-10 w-max will-change-transform">
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
-        <div class="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
-          <img src={Marca1.src} alt="Marca 1" class="h-16 object-fit" />
+        <div className="w-1/4 h-80 border border-gray-200 rounded-lg flex items-center justify-center bg-lightwhite2">
+          <img src={Marca1.src} alt="Marca 1" className="h-16 object-fit" />
         </div>
       </div>
     </div>

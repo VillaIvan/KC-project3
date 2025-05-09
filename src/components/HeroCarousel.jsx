@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import slider1 from "@/components/assets/slider1.png";
+import slider2 from "@/components/assets/slider2.png";
 import { ArrowRight } from "lucide-react";
 
 export default function HeroCarousel() {
@@ -16,7 +17,7 @@ export default function HeroCarousel() {
       title: "Peace of Mind, Guaranteed",
       description:
         "Rest easy knowing you're covered with our reliable insurance plans.",
-      image: slider1.src,
+      image: slider2.src,
     },
     {
       title: "Insurance Made Simple",
@@ -95,13 +96,13 @@ export default function HeroCarousel() {
                   <p className="mx-auto max-w-[700px] text-white/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     {slide.description}
                   </p>
-                  <div class="mx-auto md:mx-0">
+                  <div className="mx-auto md:mx-0">
                     <a
                       href="#"
-                      class="inline-flex items-center gap-2 bg-white text-primary px-4 py-3 rounded-lg text-md font-semibold hover:bg-background hover:text-white transition"
+                      className="inline-flex items-center gap-2 bg-white text-primary px-4 py-3 rounded-lg text-md font-semibold hover:bg-background hover:text-white transition"
                     >
                       Habla con un asesor
-                      <ArrowRight class="w-5 h-5" color="currentColor" />
+                      <ArrowRight className="w-5 h-5" color="currentColor" />
                     </a>
                   </div>
                 </div>

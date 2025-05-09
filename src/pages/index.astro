@@ -5,6 +5,8 @@ import Hero from "@/components/Hero.astro";
 import Layout from "@/layouts/Layout.astro";
 import HeroCarousel from "@/components/HeroCarousel";
 import Numbers from "@/components/Numbers.astro";
+import Services from "@/components/Services.astro";
+import FAQ from "@/components/FAQ.astro";
 
 // Page metadata
 const pageTitle = "Organización Cucharello";
@@ -20,8 +22,16 @@ const pageDescription =
       <AboutUs />
     </section>
     <HeroCarousel client:load />
-    <section class="h-auto bg-lightwhite rounded-4xl relative z-10 -mt-5">
+    <section class="h-auto bg-lightwhite rounded-4xl relative z-10 -mt-5 pb-10">
       <Numbers />
+    </section>
+    <section class="h-auto bg-primary rounded-4xl relative z-9 -mt-10 pb-10">
+      <Services />
+    </section>
+    <section
+      class="h-auto bg-lightwhite rounded-4xl relative z-10 -mt-10 pb-10"
+    >
+      <FAQ />
     </section>
   </main>
 </Layout>
