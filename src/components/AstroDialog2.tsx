@@ -151,7 +151,7 @@ export const AstroDialog: React.FC<DialogProps> = ({
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center "
       id={id}
     >
       {/* Overlay with blur */}
@@ -170,15 +170,16 @@ export const AstroDialog: React.FC<DialogProps> = ({
         aria-labelledby={title ? "dialog-title" : undefined}
         aria-describedby={description ? "dialog-description" : undefined}
         className={`
-          relative z-50 w-full max-w-md rounded-lg border border-gray-200 bg-white p-6 shadow-xl 
-          dark:border-gray-700 dark:bg-gray-800 dark:text-white
-          ${className}
-        `}
+    relative z-50 w-full max-w-md sm:max-w-lg 
+    rounded-lg border border-gray-200 bg-white p-6 shadow-xl
+    dark:border-gray-700 dark:bg-gray-800 dark:text-white
+    ${className}
+  `}
         style={{ animation: "dialogIn 0.3s ease-out forwards" }}
       >
         {/* Header */}
         {(title || description) && (
-          <div className="">
+          <div className="mb-4">
             {title && (
               <h2 id="dialog-title" className="text-2xl font-semibold">
                 {title}
@@ -195,8 +196,10 @@ export const AstroDialog: React.FC<DialogProps> = ({
           </div>
         )}
 
-        {/* Body */}
-        <div className="dialog-body">{children}</div>
+        {/* Body — scrollable */}
+        <div className="dialog-body max-h-[70vh] overflow-y-auto space-y-4 pr-1">
+          {children}
+        </div>
 
         {/* Close button */}
         <button
@@ -216,7 +219,7 @@ export const AstroDialog: React.FC<DialogProps> = ({
               strokeLinejoin="round"
               strokeWidth="2"
               d="M6 18L18 6M6 6l12 12"
-            ></path>
+            />
           </svg>
         </button>
       </div>
