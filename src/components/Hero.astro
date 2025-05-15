@@ -1,6 +1,7 @@
 ---
 import { ArrowRight } from "@lucide/astro";
 import HeroImg from "@/components/assets/heroimg.webp";
+import DialogWrapper2 from "./DialogWrapper2.astro";
 ---
 
 <section class="h-[100vh] w-full p-10 mb-20 md:mb-0">
@@ -26,13 +27,7 @@ import HeroImg from "@/components/assets/heroimg.webp";
         </p>
       </div>
       <div class="mx-auto md:mx-0">
-        <a
-          href="#"
-          class="flex items-center gap-2 bg-primary text-white px-4 py-3 rounded-lg text-md font-semibold hover:bg-white hover:text-primary transition"
-        >
-          Habla con un asesor
-          <ArrowRight class="w-5 h-5" color="currentColor" />
-        </a>
+        <DialogWrapper2 />
       </div>
     </div>
   </div>

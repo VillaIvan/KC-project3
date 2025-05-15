@@ -1,6 +1,10 @@
+---
+import DialogWrapper from "@/components/DialogWrapper.astro";
+---
+
 <header class="main-tool-bar fixed top-0 left-0 w-full z-50 bg-transparent">
   <nav
-    class="max-w-[90%] mx-auto flex items-center justify-between px-8 py-6 bg-primary rounded-2xl my-6"
+    class="max-w-[90%] mx-auto flex items-center justify-between px-8 py-6 bg-primary rounded-2xl my-6 border-1 border-gray-400"
   >
     <!-- Logo -->
     <div class="flex items-center space-x-2">
@@ -15,12 +19,6 @@
     </ul>
 
     <!-- CTA Button -->
-    <div>
-      <a
-        href="#"
-        class="bg-white text-black px-4 py-2 rounded-lg text-md font-semibold hover:bg-background hover:text-white transition"
-        >Contáctenos</a
-      >
-    </div>
+    <DialogWrapper />
   </nav>
 </header>

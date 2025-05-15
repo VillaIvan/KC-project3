@@ -10,6 +10,8 @@ import Navbar from "@/components/Navbar.astro";
 import "@/styles/global.css";
 import SmoothScroll from "@/components/SmoothScroll.jsx";
 import HideNavbar from "@/components/HideNavbar";
+
+import "@/styles/dialog-animations.css";
 ---
 
 <!doctype html>
@@ -27,9 +29,11 @@ import HideNavbar from "@/components/HideNavbar";
     ></canvas>
 
     <Navbar />
+
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <slot />
+
         <Footer />
       </div>
     </div>

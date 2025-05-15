@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import slider1 from "@/components/assets/slider1.png";
 import slider2 from "@/components/assets/slider2.png";
 import { ArrowRight } from "lucide-react";
+import ReactDialog from "@/components/ReactDialog";
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,7 +90,7 @@ export default function HeroCarousel() {
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="container px-4 md:px-6">
-                <div className="max-w-2xl space-y-4 text-center text-white">
+                <div className="max-w-2xl space-y-4 text-center text-white flex flex-col items-center">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                     {slide.title}
                   </h1>
@@ -97,13 +98,7 @@ export default function HeroCarousel() {
                     {slide.description}
                   </p>
                   <div className="mx-auto md:mx-0">
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 bg-white text-primary px-4 py-3 rounded-lg text-md font-semibold hover:bg-background hover:text-white transition"
-                    >
-                      Habla con un asesor
-                      <ArrowRight className="w-5 h-5" color="currentColor" />
-                    </a>
+                    <ReactDialog />
                   </div>
                 </div>
               </div>

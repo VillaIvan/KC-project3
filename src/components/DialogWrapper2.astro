@@ -1,0 +1,120 @@
+---
+// Import the CSS for animations
+import "../styles/dialog-animations.css";
+import { AstroDialog, AstroDialogTrigger } from "../components/AstroDialog2";
+import { ArrowRight } from "@lucide/astro";
+---
+
+<div class="dialog-container">
+  <AstroDialogTrigger
+    dialogId="quote-dialog"
+    className="flex items-center  bg-white text-black hover:bg-background hover:text-white text-xl py-4 border-1 border-gray-400"
+    client:load
+  >
+    Habla con un asesor
+    <!-- <ArrowRight class="w-5 h-5" color="currentColor" /> -->
+  </AstroDialogTrigger>
+</div>
+
+<AstroDialog
+  client:load
+  id="quote-dialog"
+  isOpen={false}
+  onClose={() => {}}
+  title="Dejenos su consulta"
+  description="Llena el formulario y nos pondremos en contacto contigo a la brevedad."
+>
+  <form class="space-y-4 pt-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="first-name">
+          Nombre:
+        </label>
+        <input
+          id="first-name"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Ingrese su nombre"
+          required
+        />
+      </div>
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="last-name">
+          Apellido:
+        </label>
+        <input
+          id="last-name"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Ingrese su apellido"
+          required
+        />
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="email"> Email: </label>
+        <input
+          id="email"
+          type="email"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Ingrese su email"
+          required
+        />
+      </div>
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="telephone">
+          Telefono:
+        </label>
+        <input
+          id="telephone"
+          type="tel"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Ingrese su email"
+          required
+        />
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="city"> Localidad: </label>
+        <input
+          id="city"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Ingrese su localidad"
+          required
+        />
+      </div>
+      <div class="space-y-2">
+        <label class="block text-sm font-medium" for="insurance-type">
+          Motivo:
+        </label>
+        <select
+          id="insurance-type"
+          class="w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700"
+          required
+        >
+          <option value="">--Elija una opción--</option>
+          <option value="cotizar">Cotizar</option>
+          <option value="consulta">Consulta</option>
+          <option value="productores">Productores</option>
+        </select>
+      </div>
+    </div>
+    <div class="space-y-2">
+      <label class="block text-sm font-medium" for="description">
+        ¿Cómo podemos ayudarte?
+      </label>
+      <textarea
+        id="description"
+        class="w-full min-h-[100px] rounded-md border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-700 resize-y"
+        placeholder="Contanos qué tipo de seguro necesitas."
+        required></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full rounded-md bg-background/80 py-2 px-4 font-medium text-white hover:bg-background"
+    >
+      Enviar
+    </button>
+  </form>
+</AstroDialog>
