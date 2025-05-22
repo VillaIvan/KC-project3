@@ -1,11 +1,12 @@
 ---
 import Placeholder from "@/components/assets/placeholder.svg";
+import Img2 from "@/components/assets/heroimg.webp";
 import { Asterisk } from "@lucide/astro";
 import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 ---
 
 <div
-  class="relative h-24 flex items-center justify-center overflow-hidden mb-20"
+  class="relative h-24 flex items-center justify-center overflow-hidden md:mb-20"
 >
   <svg
     class="w-[90%] md:w-[80%] h-2"
@@ -13,7 +14,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
-    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#07559f" stroke-width="2"></path>
   </svg>
   <GlowLineAnimation client:load />
 </div>
@@ -24,55 +25,56 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
   <div class="flex items-center justify-center">
     <div class="flex flex-col justify-start items-start gap-4 w-full sm:w-3/4">
       <div class="flex flex-col gap-4">
-        <h3 class="font-bold text-md">Innovación impactante</h3>
+        <h3 class="font-bold text-md">Más de 40 años de confianza</h3>
         <h2 class="text-4xl sm:text-5xl flex flex-col">
-          <span>Trazando un</span><span>nuevo rumbo</span>
+          <span>Garantizando</span><span>tu tranquilidad</span>
         </h2>
         <p class="w-full text-xl">
-          Estamos aportando tecnología avanzada a una industria anticuada,
-          fomentando la transparencia, la conveniencia y resultados optimizados
-          para el cliente.
+          En Organización Cucharello brindamos asesoramiento profesional,
+          respaldo y soluciones integrales en todos los ramos del seguro.
+          Inspirados en la visión de Jorge Cucharello, acompañamos a cada
+          cliente con compromiso, cercanía y una mirada estratégica.
         </p>
       </div>
 
       <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
-          Los clientes de seguros comerciales pueden tener acceso las 24 horas,
-          los 7 días de la semana a todo su programa de seguros a través de
-          cualquiera de nuestros agentes.
+          Atendemos a empresas, particulares y productores, con un equipo humano
+          dedicado que entiende las necesidades reales de cada asegurado y
+          ofrece respuestas personalizadas.
         </p>
       </div>
 
       <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
-          Los clientes de seguros pueden acceder a planes de beneficios,
-          información de cumplimiento y documentos seguros en nuestra plataforma
-          centralizada.
+          Respaldados por compañías líderes a nivel nacional, garantizamos
+          soluciones ágiles, transparentes y con un fuerte compromiso
+          profesional.
         </p>
       </div>
 
       <div
         class="w-full border-t border-t-gray-200 border-b border-b-gray-200 flex gap-4 p-6 items-start"
       >
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
-          El análisis predictivo y la evaluación comparativa patentada permiten
-          mejores negociaciones con los operadores y una toma de decisiones
-          informada.
+          Creemos en el crecimiento conjunto. Por eso impulsamos el desarrollo
+          de nuestros productores y clientes con una mirada cercana, confiable y
+          de largo plazo.
         </p>
       </div>
     </div>
   </div>
   <div class="h-auto m-auto">
     <div class="w-3/4 mx-auto">
-      <img class="rounded-4xl" src={Placeholder.src} />
+      <img class="rounded-4xl" src={Img2.src} />
     </div>
   </div>
 </section>
 
-<div
+<!-- <div
   class="relative h-24 flex items-center justify-center overflow-hidden mb-20"
 >
   <svg
@@ -81,7 +83,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
-    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#38afff" stroke-width="2"></path>
   </svg>
   <GlowLineAnimation client:load />
 </div>
@@ -110,7 +112,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
       </div>
 
       <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
           Los clientes de seguros comerciales pueden tener acceso las 24 horas,
           los 7 días de la semana a todo su programa de seguros a través de
@@ -119,7 +121,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
       </div>
 
       <div class="w-full border-t border-t-gray-200 flex gap-4 p-6 items-start">
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
           Los clientes de seguros pueden acceder a planes de beneficios,
           información de cumplimiento y documentos seguros en nuestra plataforma
@@ -130,7 +132,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
       <div
         class="w-full border-t border-t-gray-200 border-b border-b-gray-200 flex gap-4 p-6 items-start"
       >
-        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#0a549c" />
+        <Asterisk class="w-8 h-8 shrink-0 mt-1" color="#38afff" />
         <p class="text-lg font-normal">
           El análisis predictivo y la evaluación comparativa patentada permiten
           mejores negociaciones con los operadores y una toma de decisiones
@@ -139,7 +141,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <div class="relative h-24 flex items-center justify-center overflow-hidden">
   <svg
@@ -148,7 +150,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M0 1 L1440 1" stroke="#ccc" stroke-width="2"></path>
-    <path id="glow-scan" d="M0 1 L0 1" stroke="#0a549c" stroke-width="2"></path>
+    <path id="glow-scan" d="M0 1 L0 1" stroke="#07559f" stroke-width="2"></path>
   </svg>
   <GlowLineAnimation client:load />
 </div>

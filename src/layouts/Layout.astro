@@ -10,8 +10,8 @@ import Navbar from "@/components/Navbar.astro";
 import "@/styles/global.css";
 import SmoothScroll from "@/components/SmoothScroll.jsx";
 import HideNavbar from "@/components/HideNavbar";
-
 import "@/styles/dialog-animations.css";
+import Whatsapp from "@/components/Whatsapp.astro";
 ---
 
 <!doctype html>
@@ -23,7 +23,7 @@ import "@/styles/dialog-animations.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="relative">
+  <body class="">
     <!-- 🎨 Canvas de fondo shader -->
     <canvas id="shader-canvas" class="fixed inset-0 w-full h-full -z-10"
     ></canvas>
@@ -39,6 +39,7 @@ import "@/styles/dialog-animations.css";
     </div>
     <HideNavbar client:load />
     <SmoothScroll client:load />
+    <Whatsapp />
 
     <script type="module">
       const canvas = document.getElementById("shader-canvas");

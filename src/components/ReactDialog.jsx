@@ -13,7 +13,7 @@ export default function DialogWrapper() {
     <div className="dialog-container">
       <AstroDialogTrigger
         dialogId="quote-dialog"
-        className="flex items-center bg-white text-black hover:bg-background hover:text-white text-xl py-4 border border-gray-400"
+        className="flex items-center bg-white text-black hover:bg-primary hover:text-white text-xl py-4 border border-gray-400"
       >
         Habla con un asesor
       </AstroDialogTrigger>

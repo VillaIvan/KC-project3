@@ -1,5 +1,8 @@
 ---
+// Imports
+import Logo from "@/components/assets/Logo.png";
 import { Instagram, Linkedin, Twitter, Facebook } from "@lucide/astro";
+
 const socialPlatforms = [
   { icon: Twitter, href: "https://twitter.com" },
   { icon: Instagram, href: "https://instagram.com" },
@@ -9,19 +12,20 @@ const socialPlatforms = [
 ---
 
 <footer
-  class="py-16 px-6 md:px-10 lg:px-16 bg-primary w-[80%] mx-auto rounded-2xl mt-10"
+  class="py-16 px-6 md:px-10 lg:px-16 bg-background w-[80%] mx-auto rounded-2xl mt-10"
 >
   <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+    <!-- Primera sección -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
       <div>
-        <a href="/" class="text-white font-bold text-2xl mb-6 inline-block">
-          LOGO
+        <a href="#" class="text-white font-bold text-2xl mb-6 inline-block">
+          <img src={Logo.src} class="h-auto" />
         </a>
         <p class="text-gray-400 mb-6">
           Brindando tranquilidad a través de soluciones de seguros confiables
           desde 1995.
         </p>
-        <div class="flex space-x-4">
+        <div class="flex justify-center md:justify-start space-x-4">
           {
             socialPlatforms.map(({ icon: Icon, href }) => (
               <a
@@ -37,61 +41,40 @@ const socialPlatforms = [
         </div>
       </div>
 
-      {
-        [
-          {
-            title: "Solutions",
-            links: [
-              "Business Insurance",
-              "Employee Benefits",
-              "Risk Management",
-              "Claims Advocacy",
-              "Compliance",
-              "Technology Platform",
-            ],
-          },
-          {
-            title: "Company",
-            links: [
-              "About Us",
-              "Leadership",
-              "Careers",
-              "Press",
-              "Contact",
-              "Locations",
-            ],
-          },
-          {
-            title: "Resources",
-            links: [
-              "Blog",
-              "Guides",
-              "Webinars",
-              "Case Studies",
-              "FAQ",
-              "Support",
-            ],
-          },
-        ].map((column) => (
-          <div>
-            <h3 class="font-bold text-lg mb-4 text-white">{column.title}</h3>
-            <ul class="space-y-3">
-              {column.links.map((link) => (
-                <li>
-                  <a
-                    href="#"
-                    class="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      <!-- Links -->
+      <div
+        class="flex flex-wrap flex-col md:flex-row gap-6 md:gap-10 col-span-1 lg:col-span-3 items-center justify-end"
+      >
+        <a
+          href="/nosotros"
+          class="text-gray-400 hover:text-white transition-colors"
+        >
+          Sobre nosotros
+        </a>
+        <a
+          href="/seguros"
+          class="text-gray-400 hover:text-white transition-colors"
+        >
+          Seguros
+        </a>
+        <a
+          href="/productores"
+          class="text-gray-400 hover:text-white transition-colors"
+        >
+          Productores
+        </a>
+        <a
+          href="/contacto"
+          class="text-gray-400 hover:text-white transition-colors"
+        >
+          Contacto
+        </a>
+      </div>
     </div>
 
+    <!-- NUEVA barra identificatoria debajo -->
+
+    <!-- Créditos finales -->
     <div
       class="border-t border-gray-400 pt-8 flex flex-col md:flex-row justify-between items-center"
     >
@@ -101,15 +84,15 @@ const socialPlatforms = [
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-        <a href="https://www.instagram.com/koalaconsulting/" target="_blank"
-          ><p class="copy flex justify-center items-center p-5 text-md">
-            Diseñado por&nbsp<span class="font-bold text-white"
-              >Koala Consulting</span
-            >&nbsp©
-          </p></a
-        >
+        <a href="https://www.instagram.com/koalaconsulting/" target="_blank">
+          <p class="copy flex justify-center items-center p-5 text-md">
+            Diseñado por&nbsp;
+            <span class="font-bold text-white">Koala Consulting</span>&nbsp;©
+          </p>
+        </a>
       </div>
     </div>
   </div>
 </footer>
+
 <div class="h-20"></div>
