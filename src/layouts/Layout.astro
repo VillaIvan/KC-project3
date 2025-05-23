@@ -12,6 +12,10 @@ import SmoothScroll from "@/components/SmoothScroll.jsx";
 import HideNavbar from "@/components/HideNavbar";
 import "@/styles/dialog-animations.css";
 import Whatsapp from "@/components/Whatsapp.astro";
+import NavbarNew from "@/components/NavbarWithBurger.jsx";
+import BlurBackground from "@/components/BlurBackground.astro";
+import BlurBackgroundAnimation from "@/components/BlurBackgroundAnimation";
+import NavbarWithBurger from "@/components/NavbarWithBurger.jsx";
 ---
 
 <!doctype html>
@@ -23,25 +27,28 @@ import Whatsapp from "@/components/Whatsapp.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="">
+  <body class="bg-primary">
     <!-- 🎨 Canvas de fondo shader -->
-    <canvas id="shader-canvas" class="fixed inset-0 w-full h-full -z-10"
-    ></canvas>
+    <!-- <canvas id="shader-canvas" class="fixed inset-0 w-full h-full -z-10"
+    ></canvas> -->
 
     <Navbar />
 
     <div id="smooth-wrapper">
       <div id="smooth-content">
+        <!-- <BlurBackground />
+        <Fragment>
+          <BlurBackgroundAnimation client:load /> -->
         <slot />
-
         <Footer />
+        <!-- </Fragment> -->
       </div>
     </div>
     <HideNavbar client:load />
     <SmoothScroll client:load />
     <Whatsapp />
 
-    <script type="module">
+    <!-- <script type="module">
       const canvas = document.getElementById("shader-canvas");
 
       if (!(canvas instanceof HTMLCanvasElement)) {
@@ -125,7 +132,7 @@ import Whatsapp from "@/components/Whatsapp.astro";
       }
 
       requestAnimationFrame(render);
-    </script>
+    </script> -->
   </body>
 </html>
 

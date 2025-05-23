@@ -9,21 +9,19 @@ export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      title: "Protecting What Matters Most",
-      description:
-        "Comprehensive insurance solutions tailored to your unique needs.",
+      title: "¡Queremos potenciarte!",
+      description: "Ayudamos a Productores a crecer con bases sólidas.",
       image: slider1.src,
     },
     {
-      title: "Peace of Mind, Guaranteed",
-      description:
-        "Rest easy knowing you're covered with our reliable insurance plans.",
+      title: "Garantizamos tu respaldo.",
+      description: "Te acompañamos con respaldo, experiencia y compromiso.",
       image: slider2.src,
     },
     {
-      title: "Insurance Made Simple",
+      title: "Te entendemos, te acompañamos.",
       description:
-        "Navigate insurance with ease through our straightforward approach.",
+        "Brindamos soluciones reales para tu día a día como Productor.",
       image: slider1.src,
     },
   ];

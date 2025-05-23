@@ -5,7 +5,12 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 
-import Swipe1 from "@/components/assets/heroimg.webp";
+import Swipe1 from "@/components/assets/art.jpg";
+import Swipe2 from "@/components/assets/automotor.webp";
+import Swipe3 from "@/components/assets/comercio.jpeg";
+import Swipe4 from "@/components/assets/Hogar.jpg";
+import Swipe5 from "@/components/assets/motovehiculo.jpg";
+import Swipe6 from "@/components/assets/responsabilidad.jpg";
 
 export const ServiceData = [
   {
@@ -17,30 +22,30 @@ export const ServiceData = [
   {
     title: "AUTOMOTOR",
     content: "Te protegemos a vos y tu vehículo en la compañía...",
-    image: Swipe1.src,
+    image: Swipe2.src,
   },
   {
     title: "COMERCIOS",
     content:
       "Respaldamos tu principal fuente de ingresos adaptándonos al tamaño de tu negocio...",
-    image: Swipe1.src,
+    image: Swipe3.src,
   },
   {
     title: "HOGAR",
     content:
       "La mejor forma de resguardar tu casa y bienes con coberturas en función de la propiedad...",
-    image: Swipe1.src,
+    image: Swipe4.src,
   },
   {
     title: "MOTOVEHÍCULOS",
     content: "Si te gusta disfrutar de la libertad y los paisajes...",
-    image: Swipe1.src,
+    image: Swipe5.src,
   },
   {
     title: "RESPONSABILIDAD CIVIL",
     content:
       "Te amparamos frente a reclamos de terceros que se deriven de la realización de tu actividad profesional...",
-    image: Swipe1.src,
+    image: Swipe6.src,
   },
 ];
 

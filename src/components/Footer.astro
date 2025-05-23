@@ -1,6 +1,6 @@
 ---
 // Imports
-import Logo from "@/components/assets/Logo.png";
+import Logo from "@/components/assets/Logo2.png";
 import { Instagram, Linkedin, Twitter, Facebook } from "@lucide/astro";
 
 const socialPlatforms = [
@@ -12,7 +12,7 @@ const socialPlatforms = [
 ---
 
 <footer
-  class="py-16 px-6 md:px-10 lg:px-16 bg-background w-[80%] mx-auto rounded-2xl mt-10"
+  class="py-16 px-6 md:px-10 lg:px-16 bg-white w-[80%] mx-auto rounded-2xl mt-10"
 >
   <div class="max-w-7xl mx-auto">
     <!-- Primera sección -->
@@ -21,7 +21,7 @@ const socialPlatforms = [
         <a href="#" class="text-white font-bold text-2xl mb-6 inline-block">
           <img src={Logo.src} class="h-auto" />
         </a>
-        <p class="text-gray-400 mb-6">
+        <p class="text-background mb-6">
           Brindando tranquilidad a través de soluciones de seguros confiables
           desde 1995.
         </p>
@@ -32,9 +32,9 @@ const socialPlatforms = [
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-gray-400 hover:text-white transition-colors"
+                class="text-gray-400 hover:text-primary transition-colors"
               >
-                <Icon class="w-6 h-6" color="currentColor" size={24} />
+                <Icon class="w-8 h-8" color="currentColor" size={24} />
               </a>
             ))
           }
@@ -47,25 +47,25 @@ const socialPlatforms = [
       >
         <a
           href="/nosotros"
-          class="text-gray-400 hover:text-white transition-colors"
+          class="text-gray-400 hover:text-primary transition-colors"
         >
           Sobre nosotros
         </a>
         <a
           href="/seguros"
-          class="text-gray-400 hover:text-white transition-colors"
+          class="text-gray-400 hover:text-primary transition-colors"
         >
           Seguros
         </a>
         <a
           href="/productores"
-          class="text-gray-400 hover:text-white transition-colors"
+          class="text-gray-400 hover:text-primary transition-colors"
         >
           Productores
         </a>
         <a
           href="/contacto"
-          class="text-gray-400 hover:text-white transition-colors"
+          class="text-gray-400 hover:text-primary transition-colors"
         >
           Contacto
         </a>
@@ -78,16 +78,16 @@ const socialPlatforms = [
     <div
       class="border-t border-gray-400 pt-8 flex flex-col md:flex-row justify-between items-center"
     >
-      <p class="text-white text-sm mb-4 md:mb-0">
+      <p class="text-black text-sm mb-4 md:mb-0">
         © {new Date().getFullYear()} Organización Cucharello. Todos los derechos
         reservados.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-        <a href="https://www.instagram.com/koalaconsulting/" target="_blank">
+        <a href="https://koalaconsultingok.com/" target="_blank">
           <p class="copy flex justify-center items-center p-5 text-md">
             Diseñado por&nbsp;
-            <span class="font-bold text-white">Koala Consulting</span>&nbsp;©
+            <span class="font-bold text-black">Koala Consulting</span>&nbsp;©
           </p>
         </a>
       </div>
