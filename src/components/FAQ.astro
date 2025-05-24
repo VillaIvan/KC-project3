@@ -3,7 +3,10 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 import FaqItem from "@/components/FaqItem.jsx";
 ---
 
-<div class="relative h-24 flex items-center justify-center overflow-hidden">
+<div
+  class="relative h-24 flex items-center justify-center overflow-hidden"
+  id="FAQ"
+>
   <svg
     class="w-[90%] md:w-[80%] h-2"
     viewBox="0 0 1440 2"
@@ -32,28 +35,31 @@ import FaqItem from "@/components/FaqItem.jsx";
       <div class="mx-auto w-[90%] md:w-[80%] space-y-4 flex flex-col gap-4">
         <FaqItem
           client:load
-          question="How do I file a claim?"
-          answer="You can file a claim 24/7 through nuestro portal online..."
+          question="¿A qué incidente se considera siniestro?"
+          answer="Siniestro es un acontecimiento que origina daños concretos que se encuentran garantizados en la póliza contratada."
         />
         <FaqItem
           client:load
-          question="What factors affect my insurance premium?"
-          answer="Insurance premiums are determined by various factors including your coverage limits, deductible amount, location, claim history, and specific risk factors related to what you're insuring (e.g., home age, driving record, health status)."
+          question="Como modifico los datos de mi póliza?"
+          answer="Contactáte con nosotros y te indicaremos cómo hacerlo: Línea gratuita para consultas +54 9 221 424-5284 de lunes a viernes, de 8 a 20 h."
         />
         <FaqItem
           client:load
-          question="Can I bundle multiple insurance policies?"
-          answer="Yes, we offer multi-policy discounts when you bundle different insurance types with us. Common bundles include home and auto insurance, which can save you up to 20% on your premiums."
+          question="Qué hago si tuve un siniestro?"
+          answer={`Tenés que dar aviso a la aseguradora dentro de las 72h de producido el acontecimiento para que podamos ingresar una denuncia administrativa en la que se detallará: día, hora, lugar del siniestro, daños de tu vehículo. Y en caso que haya terceros involucrados: sus datos personales, los de su seguro y lesiones y/o daños materiales que hayan sufrido.
+
+Cuanto antes nos brindes la información del siniestro, más rápido podremos brindarte una adecuada respuesta.`}
+        />
+
+        <FaqItem
+          client:load
+          question="Cómo realizo el reclamo en la compañia del tercero con el que tuve el siniestro?"
+          answer="Contactate con la Compañía de Seguros del tercero involucrado en el choque para que te indiquen los pasos a seguir. Este trámite debés realizarlo de manera particular, es decir, que tu seguro no interviene ante el seguro del tercero."
         />
         <FaqItem
           client:load
-          question="How often should I review my insurance coverage?"
-          answer="We recommend reviewing your insurance coverage annually or whenever you experience major life changes such as marriage, home purchase, having children, or significant income changes to ensure your coverage still meets your needs."
-        />
-        <FaqItem
-          client:load
-          question="What payment options do you offer?"
-          answer="We offer flexible payment options including monthly, quarterly, semi-annual, and annual payment plans. You can pay via credit card, bank transfer, check, or through our automatic payment system."
+          question="Qué es la franquicia?"
+          answer={`La franquicia es un monto fijo que abona el asegurado en la reparación del daño propio por siniestro. El excedente del costo corre por cuenta de la aseguradora.`}
         />
       </div>
     </section>

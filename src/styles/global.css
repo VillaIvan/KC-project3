@@ -56,3 +56,8 @@
   font-weight: 700;
   font-style: italic;
 }
+
+:root {
+  --swiper-pagination-color: #ffffff; /* Active bullet color */
+  --swiper-pagination-bullet-inactive-color: #999999; /* Inactive bullet color */
+}

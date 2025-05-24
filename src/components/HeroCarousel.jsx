@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import slider1 from "@/components/assets/slider1.png";
-import slider2 from "@/components/assets/slider2.png";
+import slider1 from "@/components/assets/respaldo.jpg";
+import slider2 from "@/components/assets/potenciarte.jpg";
+import slider3 from "@/components/assets/acompañamiento.jpg";
 import { ArrowRight } from "lucide-react";
 import ReactDialog from "@/components/ReactDialog";
 
@@ -11,18 +12,18 @@ export default function HeroCarousel() {
     {
       title: "¡Queremos potenciarte!",
       description: "Ayudamos a Productores a crecer con bases sólidas.",
-      image: slider1.src,
+      image: slider2.src,
     },
     {
       title: "Garantizamos tu respaldo.",
       description: "Te acompañamos con respaldo, experiencia y compromiso.",
-      image: slider2.src,
+      image: slider1.src,
     },
     {
-      title: "Te entendemos, te acompañamos.",
+      title: `Te entendemos, te acompañamos.`,
       description:
         "Brindamos soluciones reales para tu día a día como Productor.",
-      image: slider1.src,
+      image: slider3.src,
     },
   ];
 
@@ -68,7 +69,7 @@ export default function HeroCarousel() {
   }, [currentSlide]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-gray-900 z-3 -mt-6 md:-mt-4">
+    <section className="relative w-full overflow-hidden bg-gray-900 z-3 ">
       <div className="relative h-[100vh]">
         {slides.map((slide, index) => (
           <div

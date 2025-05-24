@@ -17,16 +17,16 @@ const pageDescription =
 
 <Layout title={pageTitle} description={pageDescription}>
   <main class="relative z-0">
-    <Hero />
+    <HeroCarousel client:load />
     <section class="h-auto bg-lightwhite rounded-4xl relative z-10">
       <Clients />
       <AboutUs />
     </section>
-    <HeroCarousel client:load />
+    <Hero />
     <section class="h-auto bg-lightwhite rounded-4xl relative z-10 -mt-5 pb-10">
       <Numbers />
     </section>
-    <section class="h-auto bg-primary rounded-4xl relative z-9 -mt-10 pb-10">
+    <section class="h-auto bg-primary rounded-4xl relative z-11 -mt-10 pb-10">
       <Services />
     </section>
     <section

@@ -3,31 +3,307 @@ import DialogWrapper from "@/components/DialogWrapper.astro";
 import Logo from "@/components/assets/Logo2.png";
 ---
 
-<header class="main-tool-bar fixed top-0 left-0 w-full z-50 bg-transparent">
+<header class="main-tool-bar fixed top-0 left-0 w-full z-[100] bg-transparent">
   <nav
     class="max-w-[90%] mx-auto flex items-center justify-between px-4 md:px-8 py-3 md:py-6 bg-white rounded-2xl my-6 border-1 border-gray-400 gap-4"
   >
     <!-- Logo -->
     <div class="flex items-center space-x-2">
       <a href="#">
-        <!-- Logo para pantallas sm en adelante -->
         <img
-          src={Logo.src}
+          src={Logo.src || "/placeholder.svg"}
           alt="Logo desktop"
           class="sm:block w-auto sm:h-14 md:h-16 object-cover"
+          id="navbar-logo"
         />
       </a>
-      <!-- <p class="font-bold text-4xl text-white">LOGO</p> -->
     </div>
 
-    <!-- Navigation Links -->
+    <!-- Desktop Navigation Links -->
     <ul class="hidden md:flex space-x-6 md:space-x-10 text-md text-primary">
-      <li><a href="#" class="hover:text-gray-400 font-normal">Servicios</a></li>
-      <li><a href="#" class="hover:text-gray-400 font-normal">Nosotros</a></li>
-      <li><a href="#" class="hover:text-gray-400 font-normal">Links</a></li>
+      <li>
+        <a
+          href="#servicios"
+          class="hover:text-gray-400 font-normal"
+          id="servicios-button">Servicios</a
+        >
+      </li>
+      <li>
+        <a
+          href="#nosotros"
+          class="hover:text-gray-400 font-normal"
+          id="nosotros-button">Nosotros</a
+        >
+      </li>
+      <li>
+        <a href="#FAQ" class="hover:text-gray-400 font-normal" id="faq-button"
+          >Preguntas Frecuentes</a
+        >
+      </li>
     </ul>
 
-    <!-- CTA Button -->
-    <DialogWrapper />
+    <!-- Desktop CTA Button -->
+    <div class="block">
+      <DialogWrapper />
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-button"
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-[102] relative"
+      aria-label="Toggle mobile menu"
+    >
+      <span
+        class="block w-6 h-0.5 bg-primary transition-all duration-300 ease-in-out"
+      ></span>
+      <span
+        class="block w-6 h-0.5 bg-primary transition-all duration-300 ease-in-out"
+      ></span>
+      <span
+        class="block w-6 h-0.5 bg-primary transition-all duration-300 ease-in-out"
+      ></span>
+    </button>
   </nav>
 </header>
+
+<script>
+  // Mobile menu functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const navbarLogo = document.getElementById(
+      "navbar-logo"
+    ) as HTMLImageElement;
+    const mobileDialogWrapper = document.getElementById(
+      "mobile-dialog-wrapper"
+    );
+    let mobileMenu: HTMLElement | null = null;
+    let mobileMenuOverlay: HTMLElement | null = null;
+    let isMenuOpen = false;
+
+    // Get logo src from the navbar logo element
+    const logoSrc = navbarLogo?.src || "/placeholder.svg";
+
+    // Function to create mobile menu elements
+    function createMobileMenu() {
+      // Remove existing menu if any
+      const existingOverlay = document.getElementById("mobile-menu-overlay");
+      const existingMenu = document.getElementById("mobile-menu");
+      existingOverlay?.remove();
+      existingMenu?.remove();
+
+      // Create overlay
+      mobileMenuOverlay = document.createElement("div");
+      mobileMenuOverlay.id = "mobile-menu-overlay";
+      mobileMenuOverlay.className =
+        "fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out md:hidden";
+      mobileMenuOverlay.style.zIndex = "9998";
+
+      // Create mobile menu
+      mobileMenu = document.createElement("div");
+      mobileMenu.id = "mobile-menu";
+      mobileMenu.className =
+        "fixed top-0 right-0 h-full w-full bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-hidden";
+      mobileMenu.style.zIndex = "9998";
+
+      // Create menu content container
+      const menuContent = document.createElement("div");
+      menuContent.innerHTML = `
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <img
+            src="${logoSrc}"
+            alt="Logo mobile"
+            class="w-auto h-12 object-cover"
+          />
+          <button
+            id="mobile-menu-close"
+            class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors duration-200"
+            aria-label="Close mobile menu"
+          >
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <div class="flex flex-col h-full">
+          <!-- Navigation Links -->
+          <nav class=" px-6 py-40">
+            <ul class="space-y-8 flex flex-col items-center justify-center">
+              <li>
+                <a 
+                  href="#servicios" 
+                  class="block text-2xl font-normal text-primary hover:text-gray-400 transition-colors duration-200 py-2"
+                >
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#nosotros" 
+                  class="block text-2xl font-normal text-primary hover:text-gray-400 transition-colors duration-200 py-2 "
+                >
+                  Nosotros
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#FAQ" 
+                  class="block text-2xl font-normal text-primary hover:text-gray-400 transition-colors duration-200 py-2"
+                >
+                  Links
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+
+        </div>
+      `;
+
+      mobileMenu.appendChild(menuContent);
+
+      // Clone and insert the DialogWrapper into the mobile menu
+
+      // Append to body
+      document.body.appendChild(mobileMenuOverlay);
+      document.body.appendChild(mobileMenu);
+
+      // Add event listeners for the newly created elements
+      setupMenuEventListeners();
+    }
+
+    // Function to setup event listeners
+    function setupMenuEventListeners() {
+      const closeButton = document.getElementById("mobile-menu-close");
+      const navLinks = mobileMenu?.querySelectorAll("nav a");
+
+      closeButton?.addEventListener("click", closeMobileMenu);
+      mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+      // Close menu when clicking on navigation links
+      navLinks?.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+    }
+
+    // Function to open mobile menu
+    function openMobileMenu() {
+      console.log("Opening mobile menu...");
+
+      if (!mobileMenu || !mobileMenuOverlay) {
+        createMobileMenu();
+      }
+
+      isMenuOpen = true;
+
+      // Show overlay
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove("opacity-0", "invisible");
+        mobileMenuOverlay.classList.add("opacity-100", "visible");
+      }
+
+      // Show menu
+      if (mobileMenu) {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+      }
+
+      // Prevent body scroll
+      document.body.classList.add("overflow-hidden");
+
+      // Animate burger button to X
+      const spans = mobileMenuButton?.querySelectorAll("span");
+      if (spans) {
+        spans[0].style.transform = "rotate(45deg) translate(6px, 6px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translate(6px, -6px)";
+      }
+    }
+
+    // Function to close mobile menu
+    function closeMobileMenu() {
+      console.log("Closing mobile menu...");
+
+      if (!isMenuOpen) return;
+
+      isMenuOpen = false;
+
+      // Hide overlay
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add("opacity-0", "invisible");
+        mobileMenuOverlay.classList.remove("opacity-100", "visible");
+      }
+
+      // Hide menu
+      if (mobileMenu) {
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenu.classList.remove("translate-x-0");
+      }
+
+      // Restore body scroll
+      document.body.classList.remove("overflow-hidden");
+
+      // Reset burger button
+      const spans = mobileMenuButton?.querySelectorAll("span");
+      if (spans) {
+        spans[0].style.transform = "";
+        spans[1].style.opacity = "";
+        spans[2].style.transform = "";
+      }
+    }
+
+    // Event listeners
+    mobileMenuButton?.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Mobile menu button clicked");
+      if (isMenuOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        // md breakpoint
+        closeMobileMenu();
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Ensure smooth transitions and proper z-index stacking */
+  #mobile-menu {
+    will-change: transform;
+  }
+
+  #mobile-menu-overlay {
+    will-change: opacity;
+  }
+
+  /* Ensure the menu appears above everything */
+  #mobile-menu,
+  #mobile-menu-overlay {
+    position: fixed !important;
+  }
+
+  /* Ensure the mobile DialogWrapper is properly styled */
+  #mobile-dialog-clone {
+    width: 100%;
+  }
+
+  #mobile-dialog-clone > * {
+    width: 100%;
+  }
+</style>
