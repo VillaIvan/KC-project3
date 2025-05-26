@@ -83,7 +83,7 @@ const ActiveSlider = () => {
               <SwiperSlide key={item.title + idx} style={{ width: "auto" }}>
                 <div
                   onClick={() => setActiveIdx(idx)}
-                  className="relative w-[280px] sm:w-[300px] md:w-[320px] lg:w-[350px] h-[400px] sm:h-[420px] md:h-[440px] lg:h-[450px] rounded-lg overflow-hidden transition-all duration-300 cursor-pointer "
+                  className="relative w-[280px] sm:w-[300px] md:w-[320px] lg:w-[350px] h-[400px] sm:h-[420px] md:h-[440px] lg:h-[450px] rounded-lg overflow-hidden transition-all duration-300 cursor-pointer shadow-lg"
                 >
                   {/* Overlay controlado por estado */}
                   <div
