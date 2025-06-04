@@ -63,7 +63,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [currentSlide]);
 
@@ -88,7 +88,7 @@ export default function HeroCarousel() {
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="container px-4 md:px-6">
-                <div className="max-w-2xl space-y-4 text-center text-white flex flex-col items-center">
+                <div className="max-w-2xl space-y-4 text-center text-white flex flex-col items-center mx-auto">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                     {slide.title}
                   </h1>
