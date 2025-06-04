@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import slider1 from "@/components/assets/respaldo.jpg";
-import slider2 from "@/components/assets/potenciarte.jpg";
-import slider3 from "@/components/assets/acompañamiento.jpg";
-import { ArrowRight } from "lucide-react";
+import slider1 from "@/components/assets/respaldo.webp";
+import slider2 from "@/components/assets/potenciarte.webp";
+import slider3 from "@/components/assets/acompañamiento.webp";
 import ReactDialog from "@/components/ReactDialog";
 
 export default function HeroCarousel() {

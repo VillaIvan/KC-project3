@@ -1,6 +1,6 @@
 ---
 import AboutUs from "@/components/AboutUs.astro";
-import Clients from "@/components/Clients.astro";
+
 import Hero from "@/components/Hero.astro";
 import Layout from "@/layouts/Layout.astro";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -21,7 +21,6 @@ const pageDescription =
     <HeroCarousel client:load />
     <section class="h-auto bg-white rounded-4xl relative z-10">
       <AboutUs />
-      <!-- <Clients /> -->
     </section>
     <Hero />
     <section class="h-auto bg-white rounded-4xl relative z-10 -mt-5 pb-10">

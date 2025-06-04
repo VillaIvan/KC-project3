@@ -5,12 +5,12 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 
-import Swipe1 from "@/components/assets/art.jpg";
+import Swipe1 from "@/components/assets/art.webp";
 import Swipe2 from "@/components/assets/automotor.webp";
-import Swipe3 from "@/components/assets/comercio.jpeg";
-import Swipe4 from "@/components/assets/Hogar.jpg";
-import Swipe5 from "@/components/assets/motovehiculo.jpg";
-import Swipe6 from "@/components/assets/responsabilidad.jpg";
+import Swipe3 from "@/components/assets/comercio.webp";
+import Swipe4 from "@/components/assets/Hogar.webp";
+import Swipe5 from "@/components/assets/motovehiculo.webp";
+import Swipe6 from "@/components/assets/responsabilidad.webp";
 
 export const ServiceData = [
   {

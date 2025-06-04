@@ -18,6 +18,10 @@ export default function MapComponent() {
       center={[-34.9214, -57.9544]}
       zoom={16}
       scrollWheelZoom={false}
+      dragging={false}
+      doubleClickZoom={false}
+      touchZoom={false}
+      zoomControl={false}
       style={{
         height: "400px",
         width: "80%",
