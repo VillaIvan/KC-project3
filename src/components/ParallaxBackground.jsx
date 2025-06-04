@@ -12,7 +12,7 @@ export default function ParallaxBackground() {
     document.querySelectorAll(".parallax-section").forEach((section) => {
       const bg = section.querySelector(".bg");
       if (!bg) return;
-      bg.style.backgroundImage = `url(/assets/manos.webp)`; // asegúrate de que esté en /public/assets/
+      bg.style.backgroundImage = `url(https://images.pexels.com/photos/8297652/pexels-photo-8297652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`; // asegúrate de que esté en /public/assets/
 
       gsap.fromTo(
         bg,
