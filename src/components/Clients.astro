@@ -4,9 +4,18 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 ---
 
 <div
-  class="relative h-24 flex items-center justify-center overflow-hidden"
-  id="nosotros"
+  class="flex justify-between md:flex-row flex-col mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-10 mb-15"
 >
+  <h2 class="text-4xl sm:text-5xl">Clientes Que Confian</h2>
+  <p class="mx-auto md:mx-0 w-full md:w-1/3 text-lg">
+    Hoy, empresas y particulares de todo el país eligen respaldarse con
+    nosotros, sabiendo que cuentan con un equipo humano dedicado y una compañía
+    sólida que los acompaña en cada paso.
+  </p>
+</div>
+<BrandsLoop client:load />
+
+<div class="relative h-24 flex items-center justify-center overflow-hidden">
   <svg
     class="w-[90%] md:w-[80%] h-2"
     viewBox="0 0 1440 2"
@@ -17,14 +26,3 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
   </svg>
   <GlowLineAnimation client:load />
 </div>
-<div
-  class="flex justify-between md:flex-row flex-col mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-20 mb-15"
->
-  <h2 class="text-4xl sm:text-5xl">Clientes Que Confian</h2>
-  <p class="mx-auto md:mx-0 w-full md:w-1/3 text-lg">
-    Hoy, empresas y particulares de todo el país eligen respaldarse con
-    nosotros, sabiendo que cuentan con un equipo humano dedicado y una compañía
-    sólida que los acompaña en cada paso.
-  </p>
-</div>
-<BrandsLoop client:load />

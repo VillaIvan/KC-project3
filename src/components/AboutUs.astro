@@ -3,6 +3,7 @@ import Placeholder from "@/components/assets/placeholder.svg";
 import Img2 from "@/components/assets/heroimg.webp";
 import { Asterisk } from "@lucide/astro";
 import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
+import BrandsLoop from "./BrandsLoop";
 ---
 
 <div
@@ -21,6 +22,7 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 
 <section
   class="h-auto w-[90%] md:w-[80%] grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto"
+  id="nosotros"
 >
   <div class="flex items-center justify-center">
     <div class="flex flex-col justify-start items-start w-full sm:w-3/4">
@@ -124,6 +126,8 @@ import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
     </div>
   </div>
 </section> -->
+
+<BrandsLoop client:load />
 
 <div class="relative h-24 flex items-center justify-center overflow-hidden">
   <svg

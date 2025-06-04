@@ -20,7 +20,7 @@ export default function BrandsLoop() {
     const loop = gsap.to(track, {
       xPercent: -50,
       ease: "none",
-      duration: 60,
+      duration: 180,
       repeat: -1,
     });
 
@@ -68,7 +68,7 @@ export default function BrandsLoop() {
                 alt={`Marca ${i + 1}`}
                 className={`object-contain 
               max-h-12 sm:max-h-14 md:max-h-16 lg:max-h-20 
-              ${isMarca1 ? "scale-110" : ""} 
+              ${isMarca1 ? "scale-110" : "scale-125"} 
               max-w-[85%]`}
               />
             </div>

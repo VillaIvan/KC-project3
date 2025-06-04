@@ -1,29 +1,31 @@
 ---
 import HeroImg from "@/components/assets/Iso.svg";
-import HeroLogo from "@/components/HeroLogo.jsx";
 import DialogWrapper2 from "./DialogWrapper2.astro";
+import HeroLogo from "@/components/HeroLogo.jsx";
 ---
 
-<section class="h-[100vh] w-full p-10 mb-0">
-  <div class="grid md:grid-cols-2 gap-0 md:gap-10 h-full">
+<section class="parallax-section relative h-[100vh] w-full overflow-hidden">
+  <div class="bg-wrapper absolute top-0 left-0 w-full h-full z-[-1]">
+    <div class="bg w-full h-full bg-cover bg-center bg-no-repeat"></div>
+    <div class="overlay absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-0 md:gap-10 h-full p-10">
     <div class="flex justify-end items-end md:items-center">
-      <img
-        class="w-[30rem] sm:w-[30rem] md:w-[25rem] lg:w-[35rem] object-cover rounded-full"
-        src={HeroImg.src}
-      />
+      <HeroLogo client:load />
     </div>
     <div
       class="flex flex-col gap-6 md:gap-14 items-start justify-start md:justify-center"
     >
       <div class="md:text-start text-center w-full">
         <h1
-          class="flex flex-col text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-background"
+          class="flex flex-col text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white"
         >
           <span class="block md:inline">Crecé con nosotros.</span>
         </h1>
       </div>
       <div class="md:text-start text-center w-full">
-        <p class="text-xl mx-auto text-background">
+        <p class="text-xl mx-auto text-white">
           Te brindamos herramientas reales para tu desarrollo como Productor
           Asesor.
         </p>
@@ -34,3 +36,5 @@ import DialogWrapper2 from "./DialogWrapper2.astro";
     </div>
   </div>
 </section>
+
+<script type="module" src="/src/scripts/parallax-bg.js"></script>
