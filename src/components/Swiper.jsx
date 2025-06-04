@@ -8,7 +8,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 import Swipe1 from "@/components/assets/art.webp";
 import Swipe2 from "@/components/assets/automotor.webp";
 import Swipe3 from "@/components/assets/comercio.webp";
-import Swipe4 from "@/components/assets/Hogar.webp";
+import Swipe4 from "@/components/assets/hogar.webp";
 import Swipe5 from "@/components/assets/motovehiculo.webp";
 import Swipe6 from "@/components/assets/responsabilidad.webp";
 
