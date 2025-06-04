@@ -8,7 +8,7 @@ const getRatio = (el) =>
 
 document.querySelectorAll(".parallax-section").forEach((section, i) => {
   const bg = section.querySelector(".bg");
-  bg.style.backgroundImage = `url(https://images.pexels.com/photos/8297652/pexels-photo-8297652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`; // reemplazar por tus imágenes reales
+  bg.style.backgroundImage = `url(/assets/manos.webp)`; // reemplazar por tus imágenes reales
 
   gsap.fromTo(
     bg,
