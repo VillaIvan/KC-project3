@@ -2,6 +2,7 @@
 import HeroImg from "@/components/assets/Iso.svg";
 import DialogWrapper2 from "./DialogWrapper2.astro";
 import HeroLogo from "@/components/HeroLogo.jsx";
+import ParallaxBackground from "@/components/ParallaxBackground.jsx";
 ---
 
 <section class="parallax-section relative h-[100vh] w-full overflow-hidden">
@@ -9,6 +10,7 @@ import HeroLogo from "@/components/HeroLogo.jsx";
     <div class="bg w-full h-full bg-cover bg-center bg-no-repeat"></div>
     <div class="overlay absolute inset-0 bg-black/40"></div>
   </div>
+  <ParallaxBackground client:load />
 
   <div class="grid md:grid-cols-2 gap-0 md:gap-10 h-full p-10">
     <div class="flex justify-end items-end md:items-center">
@@ -36,5 +38,3 @@ import HeroLogo from "@/components/HeroLogo.jsx";
     </div>
   </div>
 </section>
-
-<script type="module" src="/src/scripts/parallax-bg.js"></script>
