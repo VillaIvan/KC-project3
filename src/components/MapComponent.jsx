@@ -17,7 +17,7 @@ export default function MapComponent() {
   }, []);
 
   return (
-    <div className="w-full h-[400px] lg:h-auto rounded-xl shadow-lg overflow-hidden mx-auto my-10 lg:my-0">
+    <div className="w-full md:w-[90%]  h-[400px] lg:h-[450px] xl:h-[430px] 2xl:h-[430px] rounded-xl shadow-lg overflow-hidden mx-auto my-2 lg:my-0">
       <MapContainer
         center={[-34.9111, -57.9601]}
         zoom={16}

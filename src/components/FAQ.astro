@@ -20,14 +20,16 @@ import MapComponent from "@/components/MapComponent.jsx";
 </div>
 
 <div
-  class="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[90%] md:w-[80%] gap-5 md:gap-0 mt-4 md:mt-20 mb-5 md:mb-20"
+  class="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[90%] md:w-[80%] gap-10 lg:gap-0 mt-4 md:mt-20 mb-5 md:mb-20"
 >
   <div class="flex flex-col md:gap-10 gap-6">
-    <div class="flex flex-col justify-center lg:justify-start gap-4">
+    <div
+      class="flex flex-col justify-center lg:justify-start gap-4 text-center"
+    >
       <h2 class="text-4xl sm:text-5xl">
         <span>Preguntas Frecuentes</span>
       </h2>
-      <p class="mx-auto md:mx-0 w-full md:w-1/2 text-lg">
+      <p class="mx-auto w-full lg:w-[85%] text-md xl:text-lg">
         Encuentre respuestas a preguntas comunes sobre nuestros servicios de
         seguros.
       </p>
@@ -41,12 +43,12 @@ import MapComponent from "@/components/MapComponent.jsx";
         />
         <FaqItem
           client:load
-          question="Como modifico los datos de mi póliza?"
+          question="¿Cómo modifico los datos de mi póliza?"
           answer="Contactáte con nosotros y te indicaremos cómo hacerlo: Línea gratuita para consultas +54 9 221 424-5284 de lunes a viernes, de 8 a 20 h."
         />
         <FaqItem
           client:load
-          question="Qué hago si tuve un siniestro?"
+          question="¿Qué hago si tuve un siniestro?"
           answer={`Tenés que dar aviso a la aseguradora dentro de las 72h de producido el acontecimiento para que podamos ingresar una denuncia administrativa en la que se detallará: día, hora, lugar del siniestro, daños de tu vehículo. Y en caso que haya terceros involucrados: sus datos personales, los de su seguro y lesiones y/o daños materiales que hayan sufrido.
 
 Cuanto antes nos brindes la información del siniestro, más rápido podremos brindarte una adecuada respuesta.`}
@@ -54,17 +56,22 @@ Cuanto antes nos brindes la información del siniestro, más rápido podremos br
 
         <FaqItem
           client:load
-          question="Cómo realizo el reclamo en la compañia del tercero con el que tuve el siniestro?"
+          question="¿Cómo realizo el reclamo en la compañía del tercero con el que tuve el siniestro?"
           answer="Contactate con la Compañía de Seguros del tercero involucrado en el choque para que te indiquen los pasos a seguir. Este trámite debés realizarlo de manera particular, es decir, que tu seguro no interviene ante el seguro del tercero."
         />
         <FaqItem
           client:load
-          question="Qué es la franquicia?"
+          question="¿Qué es la franquicia?"
           answer={`La franquicia es un monto fijo que abona el asegurado en la reparación del daño propio por siniestro. El excedente del costo corre por cuenta de la aseguradora.`}
         />
       </div>
     </section>
   </div>
-
-  <MapComponent client:only="react" />
+  <div class="flex flex-col justify-start items-center gap-6">
+    <div class="flex flex-col gap-4 text-center">
+      <span class="text-4xl sm:text-5xl text-center">Nuestra oficina</span>
+      <p class="mx-auto w-full text-lg">Calle 42 n°715, La Plata</p>
+    </div>
+    <MapComponent client:only="react" />
+  </div>
 </div>
