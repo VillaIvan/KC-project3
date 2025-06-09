@@ -1,13 +1,14 @@
 ---
 // Imports
 import Logo from "@/components/assets/Logo2.png";
-import { Facebook } from "@lucide/astro";
+import { Facebook, Instagram } from "@lucide/astro";
 
 const socialPlatforms = [
   {
     icon: Facebook,
-    href: "https://web.facebook.com/profile.php?id=61576360633898&mibextid=wwXIfr&rdid=k6MVlDZLaDAgYewG&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1BUo57eUiQ%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#",
+    href: "https://web.facebook.com/profile.php?id=61576360633898",
   },
+  { icon: Instagram, href: "https://www.instagram.com/org.cucharello" },
 ];
 ---
 
@@ -61,11 +62,8 @@ const socialPlatforms = [
         >
           FAQ
         </a>
-        <a
-          href="/contacto"
-          class="text-gray-400 hover:text-primary transition-colors"
-        >
-          Contacto
+        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+          Inicio
         </a>
       </div>
     </div>

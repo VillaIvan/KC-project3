@@ -11,12 +11,12 @@ import slider3 from "@/components/assets/acompañamiento.webp";
 
 const slides = [
   {
-    title: "¡Queremos potenciarte!",
+    title: "Impulsá tu cartera con el respaldo que necesitas",
     description: "Ayudamos a Productores a crecer con bases sólidas.",
     image: slider2.src,
   },
   {
-    title: "Garantizamos tu respaldo.",
+    title: "Tu tranquilidad, asegurada",
     description: "Te acompañamos con respaldo, experiencia y compromiso.",
     image: slider1.src,
   },

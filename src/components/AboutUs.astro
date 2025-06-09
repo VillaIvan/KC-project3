@@ -4,6 +4,7 @@ import Img2 from "@/components/assets/heroimg.webp";
 import { Asterisk } from "@lucide/astro";
 import GlowLineAnimation from "../components/GlowLineAnimation.jsx";
 import BrandsLoop from "./BrandsLoop";
+import FedPat from "@/components/assets/FedPat.webp";
 ---
 
 <div
@@ -25,12 +26,16 @@ import BrandsLoop from "./BrandsLoop";
   id="nosotros"
 >
   <div class="flex items-start justify-center">
-    <div class="flex flex-col justify-start items-start w-full sm:w-3/4">
-      <div class="flex flex-col gap-4">
-        <h2 class="text-4xl sm:text-5xl text-center">
+    <div
+      class="flex flex-col justify-start items-start w-full sm:w-3/4 xl:w-3/4 2xl:w-4/6"
+    >
+      <div
+        class="flex flex-col gap-4 bg-gray-100 rounded-4xl xl:pb-20 2xl:pb-26 p-6"
+      >
+        <h2 class="text-4xl sm:text-5xl text-center pb:pb-4 xl:pb-10">
           <span>Quiénes somos</span>
         </h2>
-        <p class="w-full text-xl">
+        <p class="w-full text-xl text-center">
           En Organización Cucharello contamos con más de 40 años de trayectoria
           en el mercado asegurador, brindando asesoramiento profesional y
           compromiso real con cada cliente. Inspirados en la visión de Jorge
@@ -38,11 +43,7 @@ import BrandsLoop from "./BrandsLoop";
           ofreciendo soluciones integrales en todos los ramos del seguro, tanto
           para empresas como particulares.
         </p>
-      </div>
-
-      <div class="w-full flex gap-4 p-3 items-start">
-        <Asterisk class="w-6 h-6 md:w-8 md:h-8 shrink-0 mt-1" color="#07559f" />
-        <p class="text-lg font-normal">
+        <p class="text-lg font-normal text-center">
           Acompañamos a nuestros asegurados y productores con un equipo humano
           dedicado, fomentando su desarrollo y crecimiento profesional, y
           respaldados por una compañía líder a nivel nacional.
