@@ -1,6 +1,9 @@
 ---
 import { History, Network, Users } from "@lucide/astro";
 import CounterUp from "./CounterUp.astro";
+import image1 from "@/components/assets/clientes.webp";
+import image2 from "@/components/assets/manos.webp";
+import image3 from "@/components/assets/40.webp";
 ---
 
 <section
@@ -9,7 +12,7 @@ import CounterUp from "./CounterUp.astro";
   {/** CARD 1 */}
   <div
     class="relative w-[90%] md:w-[80%] text-start border border-lightwhite py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6 overflow-hidden bg-cover bg-center"
-    style="background-image: url('/assets/clientes.webp');"
+    style={`background-image: url(${image1.src});`}
   >
     <div class="absolute inset-0 bg-black/40 z-0"></div>
     <div class="relative z-10 flex flex-col gap-6">
@@ -25,7 +28,7 @@ import CounterUp from "./CounterUp.astro";
   {/** CARD 2 */}
   <div
     class="relative w-[90%] md:w-[80%] text-start border border-lightwhite py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6 overflow-hidden bg-cover bg-center"
-    style="background-image: url('/assets/40.webp');"
+    style={`background-image: url(${image2.src});`}
   >
     <div class="absolute inset-0 bg-black/40 z-0"></div>
     <div class="relative z-10 flex flex-col gap-6">
@@ -41,7 +44,7 @@ import CounterUp from "./CounterUp.astro";
   {/** CARD 3 */}
   <div
     class="relative w-[90%] md:w-[80%] text-start border border-lightwhite py-8 px-6 rounded-xl sm:px-10 max-w-sm flex flex-col gap-6 overflow-hidden bg-cover bg-center"
-    style="background-image: url('/assets/FedPat.webp');"
+    style={`background-image: url(${image3.src});`}
   >
     <div class="absolute inset-0 bg-black/40 z-0"></div>
     <div class="relative z-10 flex flex-col gap-6">
